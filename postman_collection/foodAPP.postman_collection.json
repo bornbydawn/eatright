@@ -1,0 +1,335 @@
+{
+	"info": {
+		"_postman_id": "e38e82cd-2ad9-4116-8d02-b1bb13a6b518",
+		"name": "foodAPP",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "customer",
+			"item": [
+				{
+					"name": "DELETE",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{base_url}}/customer/5b098ea1e7b986126cdf446d",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"customer",
+								"5b098ea1e7b986126cdf446d"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GETByName",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{base_url}}/customer/findByName/Saksham",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"customer",
+								"findByName",
+								"Saksham"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"firstName\": \"Saksham\",\n    \"lastName\": \"Gupta\",\n    \"email\": \"s@g.com\",\n    \"mobile\": \"7793011887\",\n    \"employeeNumber\" : \"I342047\"\n}\n\n"
+						},
+						"url": {
+							"raw": "{{base_url}}/customer/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"customer",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{base_url}}/customer/5c3afb1a7a17d80010a63e75",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"customer",
+								"5c3afb1a7a17d80010a63e75"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PUT",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"firstName\": \"Saksham\",\n    \"lastName\": \"Gupta\",\n    \"email\": \"cs.sakshamgupta@gmail.com\",\n    \"mobile\": \"7793011887\",\n    \"employeeNumber\" : \"I342047\"\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/customer/5b06ecbcbf11f1c82cd2e6f5",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"customer",
+								"5b06ecbcbf11f1c82cd2e6f5"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "restaurant",
+			"item": [
+				{
+					"name": "POST",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Dominos\",\n    \"email\": \"dominos@gmai.com\",\n    \"mobile\": \"9876543210\",\n    \"description\" : \"Best Pizza in town\"\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/restaurant/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"restaurant",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PUT",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"dominos@gmail.com\"\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/restaurant/5b0a8989b590fc4fb5b5e940",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"restaurant",
+								"5b0a8989b590fc4fb5b5e940"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{base_url}}/restaurant/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"restaurant",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "item_type",
+			"item": [
+				{
+					"name": "GET",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{base_url}}/itemType/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"itemType",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Veg Pizza\",\n    \"restaurant\" : \"5b0a8989b590fc4fb5b5e940\",\n    \"description\" : \"Best Pizza in town\"\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/itemType/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"itemType",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
