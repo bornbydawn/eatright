@@ -21,7 +21,7 @@ const options = {
 
 const connectWithRetry = () => {
   console.log('MongoDB connection with retry');
-  mongoose.connect(config.db.url, options).then(()=>{
+  mongoose.connect(config.db.url, {useNewUrlParser : true}).then(()=>{
     console.log('MongoDB is connected')
   }).catch(err=>{
     console.log('MongoDB connection unsuccessful, retry after 5 seconds.')
@@ -37,6 +37,11 @@ require('./middleware/appMiddleware')(app);
 
 app.use('/api', api);
 app.use(err());
+
+
+var passport = require("passport"); // at header
+app.use(passport.initialize());
+require("./config/passport");
 
 module.exports = app;
 

@@ -60,4 +60,6 @@ typings/
 server/config/development.js
 server/config/production.js
 server/config/testing.js
+server/config/passport.js
 .vscode/
+

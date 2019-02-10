@@ -5,7 +5,7 @@ var config = {
     dev: 'development',
     test: 'test',
     prod: 'production',
-    port: process.env.PORT || 3000
+    port: process.env.PORT || 4500
 };
 
 process.env.NODE_ENV = process.env.NODE_ENV || config.dev;

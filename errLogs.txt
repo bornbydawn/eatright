@@ -14,3 +14,5 @@ Error: No customer with such id
 Error: No customer with such id
 MongoError: E11000 duplicate key error collection: eatSAP.customers index: email_1 dup key: { : "s@g.com" }
 Error: No customer with such id
+Error: No item type with such id
+Error: No item type with such id
