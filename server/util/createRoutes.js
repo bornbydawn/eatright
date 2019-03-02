@@ -1,5 +1,8 @@
 module.exports = function(controller, router){
 
+  
+
+    
     router.param('id', controller.params);
     // router.param('name', controller.nameParams);
 

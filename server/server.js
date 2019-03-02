@@ -9,6 +9,8 @@ var config = require('../server/config/config');
 // db.url is different depending on NODE_ENV
 var mongoose = require('mongoose');
 
+var passportRouter = require('express').Router();
+
 
 const options = {
     autoIndex: false, // Don't build indexes
@@ -42,6 +44,37 @@ app.use(err());
 var passport = require("passport"); // at header
 app.use(passport.initialize());
 require("./config/passport");
+
+
+var passport = require("passport");
+
+/* GET Google Authentication API. */
+passportRouter.get('/auth/google',
+passport.authenticate("google", { scope: ['https://www.googleapis.com/auth/plus.login',
+, 'https://www.googleapis.com/auth/plus.profile.emails.read'] })
+);
+// passportRouter.get(
+// "/auth/google/callback",
+// passport.authenticate("google", { failureRedirect: "/auth/google/failure"}
+// ,
+// function(req, res) {
+//     console.log("i am here");
+//     //var token = req.user.token;
+//     //res.redirect("http://localhost:3000?token=" + token);
+// }
+// );
+
+app.get('/auth/google/callback',
+    passport.authenticate('google', {
+        failureRedirect: '/'
+    }),
+    (req, res) => {
+        console.log('here');
+    }
+);
+
+app.use(passportRouter);
+
 
 module.exports = app;
 
