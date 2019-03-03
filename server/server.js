@@ -69,7 +69,9 @@ app.get('/auth/google/callback',
         failureRedirect: '/'
     }),
     (req, res) => {
-        console.log('here');
+        var token = req.user.token;
+        res.redirect("http://localhost:3000?token=" + token);
+
     }
 );
 
